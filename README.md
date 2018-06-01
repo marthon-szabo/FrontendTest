@@ -51,3 +51,7 @@ Fejlessz egy olyan appot, ami egy `npm install` / `npm run` parancs után elind�
  - Az alkalmazás a következő portok valamelyikét használja: **8000, 8080, 8888**
  - Mobile-first, responsive
  - A megvalósításhoz **NEM** használható jQuery!
+ - A kód Githubon elérhető, jól dokumentált
+ 
+ A fejlesztésre a feladat átadásától számítva 2 nap áll rendelkezésre.
+
