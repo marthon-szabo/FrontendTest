@@ -1,6 +1,8 @@
 # Iconocoders FrontendTest
 
-A feladat egy Node.js szerveren futó colorpicker app fejlesztése a Colourlovers API használatával - http://www.colourlovers.com/
+A feladat egy Node.js szerveren futó colorpicker app fejlesztése a Colourlovers API használatával - http://www.colourlovers.com/ 
+
+![sample](https://s3.amazonaws.com/assets-github/repo/progcode/img/ColourLovers+Live+Desktop.png)
 
 # Todo
 
