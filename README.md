@@ -1,4 +1,4 @@
-# Iconocoders FrontendTest
+# FrontendTest
 
 A feladat egy Node.js szerveren futó colorpicker app fejlesztése a Colourlovers API használatával - http://www.colourlovers.com/ 
 
