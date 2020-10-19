@@ -1,4 +1,5 @@
 # FrontendTest
+Delocal Zrt. - Frontend fejlesztői teszt
 
 A feladat egy Node.js szerveren futó colorpicker app fejlesztése a Colourlovers API használatával - http://www.colourlovers.com/ 
 
@@ -50,7 +51,7 @@ Fejlessz egy olyan appot, ami egy `npm install` / `npm run` parancs után elind�
  
 # Tecnikai feltételek
  - Az alkalmazás `npm install / npm run` paranccsal indítható
- - Az alkalmazás a következő portok valamelyikét használja: **8000, 8080, 8888**
+ - Az alkalmazás a következő portok valamelyikét használja: **3000, 8000, 8080, 8888**
  - Mobile-first, responsive
  - A megvalósításhoz **NEM** használható jQuery!
  - A kód Githubon elérhető, jól dokumentált
