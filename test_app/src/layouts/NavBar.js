@@ -5,7 +5,7 @@ export default function NavBar() {
 	return (
 		<div>
 			<Navbar bg="primary" variant="dark">
-				<Navbar.Brand href="#home">FrintednTest</Navbar.Brand>
+				<Navbar.Brand href="#home">FrontednTest</Navbar.Brand>
 			</Navbar>
 		</div>
 	);
