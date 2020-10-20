@@ -4,15 +4,15 @@ import NavBarLayout from "./layouts/NavBar";
 import Button from "react-bootstrap/Button";
 import styled from "styled-components";
 import Home from "./components/Home";
-import { Route } from "react-router";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
 	return (
 		<div>
 			<NavBarLayout />
-			<Route exact path="/">
+			<BrowserRouter path="/">
 				<Home />
-			</Route>
+			</BrowserRouter>
 		</div>
 	);
 }
