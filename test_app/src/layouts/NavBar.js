@@ -1,12 +1,11 @@
 import React from "react";
-import { NavBar } from "react-bootstrap";
+import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function NavBar() {
+export default function NavBarLayout(props) {
 	return (
-		<div>
-			<Navbar bg="primary" variant="dark">
-				<Navbar.Brand href="#home">FrontednTest</Navbar.Brand>
-			</Navbar>
-		</div>
+		<Navbar bg="primary" variant="dark">
+			<Navbar.Brand href="#home">FrontendTest</Navbar.Brand>
+		</Navbar>
 	);
 }
