@@ -20,14 +20,6 @@ export default function Palett(props) {
 			.catch((error) => console.error(error));
 	};
 
-	// const body = document.body;
-	// document.addEventListener("scroll", () => {
-	// console.log(body.clientHeight);
-	// if (body.scrollHeight - body.scrollTop == body.clientHeight) {
-	// alert("End");
-	// }
-	// });
-
 	window.onscroll = () => {
 		if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
 			bottomCounter += 10;
