@@ -37,21 +37,36 @@ export default function Palett(props) {
 			background-color: #0066cc;
 			border-radius: 2px;
 		}
+
 		@media ${devices.mobile} {
-			border: 0.2vh solid black;
-			border-radius: 0.6vh;
-			margin-top: 1vh;
-			margin-right: 1vh;
+			margin-top: 3vh;
+			margin-right: 1vw;
 			#title {
-				font-size: 4vh;
+				font-size: 25px;
 			}
 
 			#additional,
 			#stats {
-				font-size: 2vh;
+				font-size: 12px;
 			}
 			#stats {
-				margin-right: 70vw;
+				margin-right: 260px;
+			}
+		}
+
+		@media ${devices.tablet} {
+			margin-top: 3vh;
+			margin-right: 1vw;
+			#title {
+				font-size: 40px;
+			}
+
+			#additional,
+			#stats {
+				font-size: 20px;
+			}
+			#stats {
+				margin-right: 80vw;
 			}
 		}
 	`;

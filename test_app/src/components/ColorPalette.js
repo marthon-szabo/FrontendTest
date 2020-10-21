@@ -17,9 +17,9 @@ export default function ColorPalette(props) {
 
 	const ColorDiv = styled.div`
 		@media ${devices.mobile} {
-			width: 3vw;
-			height: 10vh;
-			margin-bottom: 2vh;
+			width: 12px;
+			height: 60px;
+			margin-bottom: 12px;
 		}
 	`;
 
