@@ -74,8 +74,8 @@ export default function Palett(props) {
 		}
 
 		@media ${devices.desktop} {
-			margin-left: 10vh;
-			margin-right: 1vw;
+			margin-left: 2vh;
+			margin-right: -52vw;
 			#title {
 				font-size: 40px;
 			}
@@ -84,13 +84,25 @@ export default function Palett(props) {
 				font-size: 20px;
 			}
 			#stats {
-				margin-right: 80vw;
+				margin-right: 90.5vw;
+			}
+		}
+	`;
+
+	const MainDiv = styled.div`
+		@media ${devices.desktop} {
+			display: flex;
+			flex-flow: wrap;
+			align-content: flex-start;
+			width: 100vw;
+			.palette {
+				flex-grow: 1;
 			}
 		}
 	`;
 
 	return (
-		<div>
+		<MainDiv id="main-flex">
 			{palettes.map((palette) => (
 				<PaletteDiv key={palette.id}>
 					<div>
@@ -106,6 +118,6 @@ export default function Palett(props) {
 					<ColorPalette themes={palette.colors} />
 				</PaletteDiv>
 			))}
-		</div>
+		</MainDiv>
 	);
 }

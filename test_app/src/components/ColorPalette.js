@@ -20,7 +20,7 @@ export default function ColorPalette(props) {
 		}
 
 		@media ${devices.desktop} {
-			margin-left: -40vw;
+			margin-left: 25vw;
 			margin-top: -10vh;
 		}
 	`;
