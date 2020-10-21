@@ -1,13 +1,13 @@
 const sizes = {
 	mobile: "360px",
-	tablet: "768px",
+	tablet: "760px",
 	desktop: "1100px",
 };
 
 const devices = {
-	mobile: `(min-width: ${sizes.mobile})`,
-	tablet: `(min-width: ${sizes.tablet})`,
-	desktop: `(min-width: ${sizes.dektop})`,
+	mobile: `only screen and (max-width: ${sizes.tablet})`,
+	tablet: `only screen and (min-width: ${sizes.tablet})`,
+	desktop: `only and screen (min-width: 2000px)`,
 };
 
 export default devices;

@@ -39,6 +39,8 @@ export default function Palett(props) {
 		}
 
 		@media ${devices.mobile} {
+			border: 1px solid black;
+			margin-left: 1vh;
 			margin-top: 3vh;
 			margin-right: 1vw;
 			#title {
@@ -50,17 +52,33 @@ export default function Palett(props) {
 				font-size: 12px;
 			}
 			#stats {
-				margin-right: 260px;
+				margin-right: 250px;
 			}
 		}
 
 		@media ${devices.tablet} {
+			margin-left: 3vh;
 			margin-top: 3vh;
 			margin-right: 1vw;
 			#title {
 				font-size: 40px;
 			}
 
+			#additional,
+			#stats {
+				font-size: 20px;
+			}
+			#stats {
+				margin-right: 80vw;
+			}
+		}
+
+		@media ${devices.desktop} {
+			margin-left: 10vh;
+			margin-right: 1vw;
+			#title {
+				font-size: 40px;
+			}
 			#additional,
 			#stats {
 				font-size: 20px;

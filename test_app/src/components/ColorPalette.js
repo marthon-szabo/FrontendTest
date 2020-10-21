@@ -10,12 +10,17 @@ export default function ColorPalette(props) {
 		flex-flow: nowrap;
 
 		@media ${devices.mobile} {
-			margin-left: 80vw;
+			margin-left: 70vw;
 			margin-top: -10vh;
 		}
 
 		@media ${devices.tablet} {
 			margin-left: 60vw;
+			margin-top: -10vh;
+		}
+
+		@media ${devices.desktop} {
+			margin-left: -40vw;
 			margin-top: -10vh;
 		}
 	`;
@@ -28,6 +33,12 @@ export default function ColorPalette(props) {
 		}
 
 		@media ${devices.tablet} {
+			width: 70px;
+			height: 120px;
+			margin-bottom: 12px;
+		}
+
+		@media ${devices.desktop} {
 			width: 70px;
 			height: 120px;
 			margin-bottom: 12px;
