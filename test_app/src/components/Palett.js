@@ -1,29 +1,43 @@
 import React, { useState, useEffect } from "react";
 import ColorPalette from "./ColorPalette";
 
-export default function Palett() {
+export default function Palett(props) {
 	const [palettes, setPalettes] = useState([]);
+	let bottomCounter = 0;
 
 	useEffect(() => {
 		apiRequest();
-	}, []);
+	}, [bottomCounter]);
 
 	const apiRequest = () => {
 		fetch(
-			"http://www.colourlovers.com/api/palettes/new?format=json&numResults=10"
+			`http://www.colourlovers.com/api/palettes/new?format=json&numResults=10&resultOffset=${bottomCounter}`
 		)
 			.then((resp) => resp.json())
-			.then((respAsJson) => setPalettes(respAsJson))
+			.then((respAsJson) =>
+				setPalettes((prevPalettes) => [...prevPalettes, ...respAsJson])
+			)
 			.catch((error) => console.error(error));
 	};
 
-	const scrollEventHandler = (e) => {};
+	// const body = document.body;
+	// document.addEventListener("scroll", () => {
+	// console.log(body.clientHeight);
+	// if (body.scrollHeight - body.scrollTop == body.clientHeight) {
+	// alert("End");
+	// }
+	// });
 
-	console.log(palettes);
-
+	window.onscroll = () => {
+		if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+			bottomCounter += 10;
+			apiRequest();
+			console.log(bottomCounter);
+		}
+	};
 	// const PalettDiv = styled.div``;
 	return (
-		<div onScroll={apiRequest()}>
+		<div>
 			{palettes.map((palette) => (
 				<div key={palette.id}>
 					<div>

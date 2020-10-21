@@ -7,6 +7,8 @@ export default function Home() {
 		background-color: #0066ff;
 		width: 100vw;
 		height: 100vh;
+		height: auto;
+		overflow: auto;
 	`;
 
 	return (
