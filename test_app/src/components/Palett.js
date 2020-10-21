@@ -5,19 +5,25 @@ export default function Palett() {
 	const [palettes, setPalettes] = useState([]);
 
 	useEffect(() => {
+		apiRequest();
+	}, []);
+
+	const apiRequest = () => {
 		fetch(
 			"http://www.colourlovers.com/api/palettes/new?format=json&numResults=10"
 		)
 			.then((resp) => resp.json())
 			.then((respAsJson) => setPalettes(respAsJson))
 			.catch((error) => console.error(error));
-	}, []);
+	};
+
+	const scrollEventHandler = (e) => {};
 
 	console.log(palettes);
 
 	// const PalettDiv = styled.div``;
 	return (
-		<div>
+		<div onScroll={apiRequest()}>
 			{palettes.map((palette) => (
 				<div key={palette.id}>
 					<div>
@@ -29,7 +35,7 @@ export default function Palett() {
 							{palette.numViews} views {palette.numVotes} vote
 						</div>
 					</div>
-					<ColorPalette themes={["9F1F63"]} />
+					<ColorPalette themes={palette.colors} />
 				</div>
 			))}
 		</div>
