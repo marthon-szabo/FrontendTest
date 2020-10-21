@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ColorPalette from "./ColorPalette";
+import styled from "styled-components";
+import devices from "../layouts/BreakPoint";
 
 export default function Palett(props) {
 	const [palettes, setPalettes] = useState([]);
@@ -27,22 +29,49 @@ export default function Palett(props) {
 			console.log(bottomCounter);
 		}
 	};
-	// const PalettDiv = styled.div``;
+
+	const PaletteDiv = styled.div`
+		color: white;
+		font-family: Trebuchet MS, sans-serif;
+		#stats {
+			background-color: #0066cc;
+			border-radius: 2px;
+		}
+		@media ${devices.mobile} {
+			border: 0.2vh solid black;
+			border-radius: 0.6vh;
+			margin-top: 1vh;
+			margin-right: 1vh;
+			#title {
+				font-size: 4vh;
+			}
+
+			#additional,
+			#stats {
+				font-size: 2vh;
+			}
+			#stats {
+				margin-right: 70vw;
+			}
+		}
+	`;
+
 	return (
 		<div>
 			{palettes.map((palette) => (
-				<div key={palette.id}>
+				<PaletteDiv key={palette.id}>
 					<div>
-						<p>{palette.title}</p>
-						<p>
+						<span id="title">{palette.title}</span>
+						<br />
+						<span id="additional">
 							by {palette.userName} at {palette.dateCreated}
-						</p>
-						<div>
+						</span>
+						<div id="stats">
 							{palette.numViews} views {palette.numVotes} vote
 						</div>
 					</div>
 					<ColorPalette themes={palette.colors} />
-				</div>
+				</PaletteDiv>
 			))}
 		</div>
 	);
