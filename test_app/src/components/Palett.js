@@ -69,7 +69,7 @@ export default function Palett(props) {
 				font-size: 20px;
 			}
 			#stats {
-				margin-right: 80vw;
+				margin-right: 75vw;
 			}
 		}
 
