@@ -13,12 +13,23 @@ export default function ColorPalette(props) {
 			margin-left: 80vw;
 			margin-top: -10vh;
 		}
+
+		@media ${devices.tablet} {
+			margin-left: 60vw;
+			margin-top: -10vh;
+		}
 	`;
 
 	const ColorDiv = styled.div`
 		@media ${devices.mobile} {
 			width: 12px;
 			height: 60px;
+			margin-bottom: 12px;
+		}
+
+		@media ${devices.tablet} {
+			width: 70px;
+			height: 120px;
 			margin-bottom: 12px;
 		}
 	`;
