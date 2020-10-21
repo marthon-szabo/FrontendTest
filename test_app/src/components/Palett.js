@@ -25,11 +25,9 @@ export default function Palett() {
 						<p>
 							by {palette.userName} at {palette.dateCreated}
 						</p>
-						<p>
-							<div>
-								{palette.numViews} views {palette.numVotes} vote
-							</div>
-						</p>
+						<div>
+							{palette.numViews} views {palette.numVotes} vote
+						</div>
 					</div>
 					<ColorPalette themes={["9F1F63"]} />
 				</div>
