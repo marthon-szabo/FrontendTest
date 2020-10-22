@@ -13,7 +13,8 @@ export default function Palett(props) {
 
 	const apiRequest = () => {
 		fetch(
-			`http://www.colourlovers.com/api/palettes/new?format=json&numResults=10&resultOffset=${bottomCounter}`
+			"https://cors-anywhere.herokuapp.com/http://www.colourlovers.com/api/palettes/new?format=json&numResults=10&resultOffset=" +
+				`${bottomCounter}`
 		)
 			.then((resp) => resp.json())
 			.then((respAsJson) =>
